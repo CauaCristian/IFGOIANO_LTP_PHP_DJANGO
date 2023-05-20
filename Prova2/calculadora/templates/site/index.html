@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imc django</title>
+</head>
+<body>
+    <h1><span style="color: rgb(255, 0, 0);">Calcule Seu IMC</span></h1>
+
+    <form action="{% url 'ip' %}" method="POST">{% csrf_token %}
+        MASSA: <input type="number" name="MASSA" placeholder="INFORME SUA MASSA">
+        <br>
+        <br>
+        <br>
+        <br>
+        ALTURA: <input type="number" name="ALTURA" placeholder="INFORME SUA ALTURA">
+        <br>
+        <br>
+        <br>
+        <br>
+        <input type="submit" name="botão" value="calcular">
+
+    </form>
+</body>
+</html>
